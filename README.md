@@ -142,6 +142,10 @@ try (SqlGuardScope scope = SqlGuardScope.open()) {
 ## 架构
 
 ```mermaid
+---
+config:
+  htmlLabels: false
+---
 flowchart TD
     A[业务应用] --> B[MyBatis StatementHandler 拦截器]
     B --> C[SQL 脱敏与规范化]
