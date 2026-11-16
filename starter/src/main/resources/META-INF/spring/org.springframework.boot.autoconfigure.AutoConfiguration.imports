@@ -1,0 +1,2 @@
+io.sqlguard.starter.SqlGuardAutoConfiguration
+io.sqlguard.starter.SqlGuardWebAutoConfiguration

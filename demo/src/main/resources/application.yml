@@ -1,0 +1,21 @@
+server:
+  address: 127.0.0.1
+  port: ${SQLGUARD_PORT:8080}
+spring:
+  application:
+    name: sqlguard-demo
+  datasource:
+    url: ${SQLGUARD_DB_URL:jdbc:h2:mem:sqlguard;MODE=MySQL;DB_CLOSE_DELAY=-1}
+    username: ${SQLGUARD_DB_USER:sa}
+    password: ${SQLGUARD_DB_PASSWORD:}
+  sql:
+    init:
+      mode: always
+sqlguard:
+  slow-threshold: ${SQLGUARD_SLOW_THRESHOLD:4ms}
+  deep-offset: 1000
+  explain:
+    enabled: ${SQLGUARD_EXPLAIN:false}
+  management:
+    enabled: true
+    token: ${SQLGUARD_TOKEN:sqlguard-demo}
