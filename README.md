@@ -145,6 +145,8 @@ try (SqlGuardScope scope = SqlGuardScope.open()) {
 ---
 config:
   htmlLabels: false
+  flowchart:
+    wrappingWidth: 280
 ---
 flowchart TD
     A[业务应用] --> B[MyBatis StatementHandler 拦截器]
